@@ -1,43 +1,5 @@
 * {
   margin: 0;
   box-sizing: border-box;
-}
-body {
-  /* margin: 50px; */
-}
-.App {
-  font-family: sans-serif;
-  text-align: center;
-  margin: 1em;
-}
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-  grid-template-rows: repeat(auto-fill, minmax(100px, 1fr));
-  grid-auto-flow: dense;
-}
-.item {
-  width: 10em;
-  height: auto;
-}
-
-/* .item:nth-child(3n) {
-  grid-column: span 4;
-  background: blue;
-}
-.item:nth-child(5n) {
-  grid-column: span 3;
-  background-color: #f5ecec;
-}
-.item:nth-child(7n) {
-  grid-column: span 2;
-  background-color: #f35810;
-} */
-.bg_red {
-  background: red;
-}
-.img_custom {
-  width: 100%;
-  height: 100%;
-  /* height: 100%; */
+  font-family: "Roboto", sans-serif;
 }
