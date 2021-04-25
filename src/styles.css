@@ -3,7 +3,15 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
-
+body {
+  background-color: #22272e;
+  color: #ffff;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 .gallery_masonry__complet_space {
   display: block;
   width: 100%;
@@ -13,6 +21,12 @@
   cursor: pointer;
   min-width: 100%;
   min-height: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .gallery_masonry__complet_space:hover {
+    transform: scale(1.2);
+  }
 }
 
 .modal_senixcode_gallery_custom {
