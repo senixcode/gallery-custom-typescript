@@ -14,7 +14,7 @@ const Modal = () => {
     </Fragment>
   );
   return (
-    <div className="modal" ref={modalRef}>
+    <div className="modal_senixcode_gallery_custom" ref={modalRef}>
       <IconsModal />
       <Slider currentSlide={currentSlide} />
       {/* <p className="caption">Test caption</p> */}

@@ -3,3 +3,24 @@
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
 }
+.gallery_masonry__complet_space {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  min-width: 100%;
+  min-height: 100%;
+}
+.modal_senixcode_gallery_custom {
+  background-color: rgba(0, 0, 0, 0.8);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.25s ease-out;
+}
