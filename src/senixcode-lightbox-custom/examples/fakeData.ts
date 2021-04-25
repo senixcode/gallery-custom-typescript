@@ -14,6 +14,10 @@ const video = {
 
 export const dataExample1: Array<Item> = [
   {
+    src: video.normal,
+    type: TypeItem.VIDEO
+  },
+  {
     src: image.normal,
     type: TypeItem.IMAGE
   },
@@ -24,10 +28,6 @@ export const dataExample1: Array<Item> = [
   {
     src: image.large,
     type: TypeItem.IMAGE
-  },
-  {
-    src: video.normal,
-    type: TypeItem.VIDEO
   }
 ];
 

@@ -1,35 +1,29 @@
-import { FC, Fragment } from "react";
+import { FC } from "react";
 import SwitchGalleryTypes from "./assets/SwitchGalleryTypes";
 import useSlider from "./hooks/useSlider";
+import { Item } from "./types";
+import { ButtonsSlider } from "./components/ButtonsSlider";
 
 interface PropsSlider {
   currentSlide: number;
 }
-const Slider: FC<PropsSlider> = ({ currentSlide }) => {
-  const { showModal, plusSlides } = useSlider(currentSlide);
-  if (!showModal.items) return <p>Error slider</p>;
 
-  const ButtonsSlider: FC<{ plusSlides: (n: number) => void }> = ({
-    plusSlides
-  }) => (
-    <Fragment>
-      <span className="prev" onClick={() => plusSlides(-1)}>
-        ❮
-      </span>
-      <span className="next" onClick={() => plusSlides(1)}>
-        ❯
-      </span>
-    </Fragment>
-  );
+const Slider: FC<PropsSlider> = ({ currentSlide }) => {
+  const { showModal, plusSlides, currentItemNumber } = useSlider(currentSlide);
+
+  if (!showModal?.items) return <p>Error slider</p>;
 
   return (
-    <div className="container-slide full-item">
+    <div className="slider_senixcode_gallery_custom modal_senixcode_gallery_custom__showGalleryType">
       {showModal.items?.length > 0 &&
-        showModal.items.map((item, index) => (
-          <div key={item.src} className="slide">
-            <div className="numbertext">{`${index + 1} / ${
-              showModal.items?.length
-            }`}</div>
+        showModal.items.map((item: Item, index: number) => (
+          <div
+            key={item.src}
+            className="slider_senixcode_gallery_custom__GalleryType"
+          >
+            <div className="slider_senixcode_gallery_custom__GalleryType_length">
+              {currentItemNumber(index)}
+            </div>
             <SwitchGalleryTypes item={item} />
           </div>
         ))}

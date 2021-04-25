@@ -12,6 +12,7 @@ const Video: FC<PropsVideo> = (props) => (
     className={props.className}
     style={props.style}
     onClick={props.onClick}
+    controls
   >
     <source src={props.src} />
   </video>
