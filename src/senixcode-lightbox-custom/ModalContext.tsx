@@ -2,8 +2,8 @@ import React, { FC } from "react";
 import { IModalContext, IShowModalState } from "./types";
 export const INITIALIZED_MODAL: IShowModalState = {
   state: false,
-  item: {},
-  items: []
+  item: undefined,
+  items: undefined
 };
 export const ModalContext = React.createContext<IModalContext>({});
 export const ModalProvider: FC = ({ children }) => {
