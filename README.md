@@ -1,4 +1,4 @@
-# gallery-custom-typescript
+# senixcode-lightbox-custom
 
 ### typescript+css+style-components
 
